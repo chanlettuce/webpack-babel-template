@@ -9,8 +9,8 @@ $(() => {
   $("#sort").click(() => {
     try {
       const beforeObj = JSON.parse($("#input-json").val());
-      const afterObj = methods.objectSort(inputObj);
-      $("#output-json").val(JSON.stringify(sorted, null, 2));
+      const afterObj = methods.objectSort(beforeObj);
+      $("#output-json").val(JSON.stringify(afterObj, null, 2));
     } catch (e) {
       console.error(e);
       $("#error-message").text(e.message);

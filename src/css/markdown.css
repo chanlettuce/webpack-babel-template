@@ -32,12 +32,12 @@ a {
 }
 
 h1 {
-  margin: 0px;
+  margin: 0;
   margin-bottom: 0.5em;
   padding: 1em;
   background: #7b9ad0;
   color: #ffffff;
-  border-radius: 3px 3px 0px 0px;
+  border-radius: 3px 3px 0 0;
   overflow: hidden;
 }
 
@@ -58,7 +58,7 @@ h2 {
   border-width: 2px;
   border-style: none none solid solid;
   border-color: #7b9ad0;
-  border-radius: 0px 0px 0px 5px;
+  border-radius: 0 0 0 5px;
 }
 
 h3 {
@@ -84,7 +84,7 @@ ul ul,
 ul ol,
 ol ul,
 ol ol {
-  border: 0px none;
+  border: 0 none;
 }
 
 table {
@@ -138,4 +138,105 @@ button {
 button.positive {
   background-color: #7b9ad0;
   color: #ffffff;
+}
+
+blockquote {
+  position: relative;
+  padding: 5px 10px 5px 32px;
+  box-sizing: border-box;
+  font-style: italic;
+  background: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+}
+
+blockquote:before {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: -15px;
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  content: "\f10d";
+  font-family: "Font Awesome 5 Free";
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 30px;
+  background: #7b9ad0;
+  border-radius: 0 5px 5px 0;
+  box-shadow: 0 2px 2px rgba(26, 26, 26, 0.14);
+  font-weight: 900;
+}
+
+blockquote:after {
+  position: absolute;
+  content: "";
+  top: 40px;
+  left: -15px;
+  border: none;
+  border-bottom: solid 8px transparent;
+  border-right: solid 15px #516c9d;
+}
+
+blockquote p {
+  position: relative;
+  padding: 0;
+  margin: 10px 0;
+  z-index: 3;
+  line-height: 1.7;
+}
+
+blockquote cite {
+  display: block;
+  text-align: right;
+  color: #888888;
+  font-size: 0.9em;
+}
+
+pre {
+  position: relative;
+  padding: 5px 10px 5px 32px;
+  box-sizing: border-box;
+  background: #f3f3f3;
+  border-radius: 5px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+}
+
+pre:before {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: -15px;
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  content: "\f121";
+  font-family: "Font Awesome 5 Free";
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 30px;
+  background: #7b9ad0;
+  border-radius: 0 5px 5px 0;
+  box-shadow: 0 2px 2px rgba(26, 26, 26, 0.14);
+  font-weight: 900;
+}
+
+pre:after {
+  position: absolute;
+  content: "";
+  top: 40px;
+  left: -15px;
+  border: none;
+  border-bottom: solid 8px transparent;
+  border-right: solid 15px #516c9d;
+}
+
+pre code div {
+  position: relative;
+  padding: 0;
+  margin: 10px 0;
+  z-index: 3;
+  font-family: "MS Gothic", Consolas, "Courier New", Courier, Monaco, monospace;
+  text-align: left;
 }

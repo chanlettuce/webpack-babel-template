@@ -6,7 +6,7 @@ export const methods = {
 
     let keys = [];
     for (const key in obj) {
-      if (typeof obj[key] == "object") {
+      if (typeof obj[key] == 'object') {
         obj[key] = methods.objectSort(obj[key]);
       }
       keys.push(key);

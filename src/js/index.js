@@ -1,26 +1,24 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free';
 import '../css/json-sorter.css';
-import $ from 'jquery';
 import 'bootstrap';
-import { methods } from './methods';
+import { $, methods } from './methods';
 
-$(() => {
-  // 実行ボタン
-  $('#sort').click(() => {
+const main = () => {
+  $('#sort').addEventListener('click', event => {
     try {
-      const beforeObj = JSON.parse($('#input-json').val());
+      const beforeObj = JSON.parse($('#input-json').value);
       const afterObj = methods.objectSort(beforeObj);
-      $('#output-json').val(JSON.stringify(afterObj, null, 2));
+      $('#output-json').value = JSON.stringify(afterObj, null, 2);
     } catch (e) {
       console.error(e);
-      $('#error-message').text(e.message);
+      $('#error-message').innerHTML = e.message;
     }
   });
-
-  // 削除ボタン
-  $('#erase').click(() => {
-    $('#input-json').val('');
-    $('#output-json').val('');
+  $('#erase').addEventListener('click', event => {
+    $('#input-json').innerHTML = '';
+    $('#output-json').innerHTML = '';
   });
-});
+};
+
+window.addEventListener('load', main);

@@ -1,3 +1,6 @@
+export const $ = query => document.querySelector(query);
+export const $$ = query => document.querySelectorAll(query);
+
 export const methods = {
   objectSort: obj => {
     if (Array.isArray(obj)) {

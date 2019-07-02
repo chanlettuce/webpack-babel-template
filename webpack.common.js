@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
+const WebpackGtagPlugin = require('webpack-gtag-plugin');
 
 const src = __dirname + '/src';
 
@@ -17,7 +18,8 @@ module.exports = {
       minify: true,
       inlineSource: '.(js|css)$'
     }),
-    new HtmlWebpackInlineSourcePlugin()
+    new HtmlWebpackInlineSourcePlugin(),
+    new WebpackGtagPlugin({ id: 'hoge' })
   ],
   module: {
     rules: [

@@ -16,8 +16,8 @@ const main = () => {
     }
   });
   $('#erase').addEventListener('click', event => {
-    $('#input-json').innerHTML = '';
-    $('#output-json').innerHTML = '';
+    $('#input-json').value = '';
+    $('#output-json').value = '';
   });
 };
 
